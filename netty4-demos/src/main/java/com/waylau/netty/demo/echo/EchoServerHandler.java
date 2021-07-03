@@ -16,8 +16,8 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
 		System.out.println(ctx.channel().remoteAddress() + " -> Server :" + msg);
 		
 		// 写消息到管道
-		ctx.write(msg);// 写消息
-		ctx.flush(); // 冲刷消息
+		ctx.write(msg);
+		ctx.flush();
 		
 		// 上面两个方法等同于 ctx.writeAndFlush(msg);
 	}
